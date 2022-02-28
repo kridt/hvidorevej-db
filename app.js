@@ -2,9 +2,14 @@ require("dotenv").config()
 var express = require('express');
 var app = express();
 var formidable = require('express-formidable');
+var cors = require('cors');
+
+
 
 require("./database");
 app.use(formidable());
+app.use(cors({ origin: true }))
+
 
 
 require("./vote.route")(app);
