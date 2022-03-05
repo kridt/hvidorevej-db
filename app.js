@@ -13,7 +13,7 @@ app.use(cors({ origin: true }))
 
 
 require("./vote.route")(app);
-
+require("./visit.route")(app);
 app.listen(process.env.PORT || 3000, function(){
     console.log("app is running on port " + process.env.PORT || 3000);
 })
